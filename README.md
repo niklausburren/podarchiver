@@ -16,7 +16,7 @@ PodArchiver fetches episodes from RSS feeds, stores them in a structured way, ta
 ## Installation
 
 1. Install [.NET 8 SDK](https://dotnet.microsoft.com/download)
-2. Clone the repository: `git clone https://github.com/your-username/podarchiver.git`
+2. Clone the repository: `git clone https://github.com/niklausburren/podarchiver.git`
 3. Restore dependencies: `dotnet restore`
 
 ## Configuration
