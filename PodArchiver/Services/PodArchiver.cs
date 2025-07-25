@@ -118,12 +118,14 @@ public class PodArchiver
                     var fileName = $"{episode.PubDate:yyyy-MM-dd} {Utils.Utils.SanitizeFileName(episode.Title)}{episode.Extension}";
                     var filePath = Path.Combine(targetFolder, fileName);
 
-                    if (!File.Exists(filePath))
+                    if (File.Exists(filePath))
                     {
-                        Logger.Info("Downloading episode: {0}", filePath);
-                        var bytes = await Http.GetByteArrayAsync(episode.Url, this.Token);
-                        await File.WriteAllBytesAsync(filePath, bytes, this.Token);
+                        continue;
                     }
+
+                    Logger.Info("Downloading episode: {0}", filePath);
+                    var bytes = await Http.GetByteArrayAsync(episode.Url, this.Token);
+                    await File.WriteAllBytesAsync(filePath, bytes, this.Token);
 
                     Logger.Info("Tagging episode: {0}", filePath);
                     var tagger = new TagWriter(filePath);
