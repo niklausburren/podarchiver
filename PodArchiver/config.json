@@ -4,8 +4,7 @@
     "feeds": [
         {
             "title": "Der Bobcast",
-            "url": "https://cdn.julephosting.de/podcasts/1120-haschimitenfurst-der-bobcast/feed.rss",
-            "count": 100
+            "url": "https://cdn.julephosting.de/podcasts/1120-haschimitenfurst-der-bobcast/feed.rss"
         },
         {
             "title": "WDR Zeitzeichen",
@@ -13,7 +12,8 @@
         },
         {
             "title": "SRF Echo der Zeit",
-            "url": "https://www.srf.ch/feed/podcast/sd/28549e81-c453-4671-92ad-cb28796d06a8.xml"
+            "url": "https://www.srf.ch/feed/podcast/sd/28549e81-c453-4671-92ad-cb28796d06a8.xml",
+            "count": 10
         },
         {
             "title": "SRF Geschichte",
@@ -46,6 +46,10 @@
         {
             "title": "SRF Tageschronik",
             "url": "https://www.srf.ch/feed/podcast/sd/3dfafd56-bf7e-403e-b911-40d4ea8e6861.xml"
+        },
+        {
+            "title": "SRF Trend",
+            "url": "https://www.srf.ch/feed/podcast/sd/f261ab93-6b97-4a82-a0c5-9eb38e857bee.xml"
         },
         {
             "title": "Einschlafen mit Weltall",
