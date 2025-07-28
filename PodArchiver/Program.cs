@@ -10,7 +10,7 @@ public class Program
     public static async Task<int> Main(string[] args)
     {
         var logger = LogManager.GetCurrentClassLogger();
-        const string configFile = "config.json";
+        var configPath = Environment.GetEnvironmentVariable("CONFIG_PATH") ?? "config.json";
 
         var cts = new CancellationTokenSource();
 
@@ -29,7 +29,7 @@ public class Program
 
         try
         {
-            var service = new PodArchiverService(configFile);
+            var service = new PodArchiverService(configPath);
             await service.RunAsync(cts.Token);
             return 0; // success
         }

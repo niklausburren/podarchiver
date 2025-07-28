@@ -10,13 +10,15 @@ public static class Utils
 
     public static string SanitizeFolderName(string name)
     {
-        var invalidChars = Path.GetInvalidPathChars();
+        char[] extraInvalid = { '<', '>', ':', '"', '/', '\\', '|', '?', '*' };
+        var invalidChars = Path.GetInvalidPathChars().Union(extraInvalid).ToArray();
         return string.Concat(name.Where(c => !invalidChars.Contains(c))).Trim();
     }
 
     public static string SanitizeFileName(string name)
     {
-        var invalidChars = Path.GetInvalidFileNameChars();
+        char[] extraInvalid = { '<', '>', ':', '"', '/', '\\', '|', '?', '*' };
+        var invalidChars = Path.GetInvalidFileNameChars().Union(extraInvalid).ToArray();
         return string.Concat(name.Where(c => !invalidChars.Contains(c))).Trim();
     }
 
