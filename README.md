@@ -29,13 +29,14 @@ Edit the `config.json` file in the main directory:
   "downloadTimes": ["06:00", "18:00"],
   "feeds": [
 	{
+	  "title": "My Favorite Podcast",
 	  "url": "https://example.com/feed.xml",
-	  "count": 10,
-	  "name": "My Favorite Podcast"
+	  "count": 10
 	},
 	{
+	  // No title: RSS feed title will be used
 	  "url": "https://another-feed.com/rss"
-	  // No name: RSS feed title will be used
+	  // No count: All episodes of the RSS feed will be downloaded
 	}
   ]
 }
@@ -75,12 +76,3 @@ PodArchiver/
 ## License
 
 This project is licensed under the MIT License.
-
----
-
-**Note:**  
-If a `name` is specified for a feed in `config.json`, it will be used for folder names and tagging. Otherwise, the name from the RSS feed will be used.
-
----
-
-Enjoy archiving your favorite podcasts!
