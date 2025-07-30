@@ -127,7 +127,6 @@ public class PodArchiver
                     var bytes = await Http.GetByteArrayAsync(episode.Url, this.Token);
                     await File.WriteAllBytesAsync(filePath, bytes, this.Token);
 
-                    Logger.Info("Tagging episode: {0}", filePath);
                     var tagger = new TagWriter(filePath);
                     tagger.ClearAllTags();
                     tagger.WriteTags(episode, albumTitle, feed.CoverBytes, albumArtist);
